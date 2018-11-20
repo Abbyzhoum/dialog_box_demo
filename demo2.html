@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>录音进度条</title>
+  <link rel="stylesheet" href="./css/mian.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17-beta.0/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+  <script src="./data/data.js"></script>
+
+
+</head>
+<body>
+   <div id="words">
+      <div>
+        <audio src="file:///Users/wellcloud/Desktop/TFBOYS%20-%20%20%20%20.mp3"
+          @pause="onPause"
+          @play="onPlay"
+          controls="controls"
+          ref="audio" 
+        ></audio>
+        <div>
+          <button  type="text">
+            当前播放时长:{{ audio.currentTime | formatSecond}}
+          </button>
+          <button  type="text">音频最大播放时长:{{data.durtime/1000 | formatSecond}}</button>
+        </div>
+      </div>
+      <div class="talk_con">           
+        <!-- <div >           -->
+          <div class="talk_show" v-for="(item,index) in data.sentence_list" :key="index">
+              <div :class="item.sentence.role === '0'? 'atalk' : 'btalk'">
+                <span :class="(item.sentence.end_time/1000 > audio.currentTime && item.sentence.start_time/1000 < audio.currentTime) ? 'talk_special' : ''">{{item.sentence.text}}</span><br>
+                <span class="time">{{(item.sentence.end_time-item.sentence.start_time)/1000 | formatSecond}}</span>
+              </div>
+              <!-- <div class="atalk"><span id="asay">a客服说：{{service.text}}</span></div>
+              <div class="btalk"><span id="bsay">b小姐姐说：{{customer.text}}</span></div> -->
+          <!-- </div> -->
+        </div>
+      </div>
+   </div>
+</body>
+<script src="./js/app.js"></script>
+</html>
+
