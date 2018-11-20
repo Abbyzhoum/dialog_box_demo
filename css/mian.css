@@ -1,0 +1,64 @@
+.talk_con{
+  width:600px;
+  height:500px;
+  overflow:scroll;
+  border:2px solid #666;
+  margin:50px auto 0;
+  background:rgb(253,253,253);
+}
+.talk_show{
+  width:100%;
+  margin:10px auto 0;
+  overflow:auto;
+  color: rgb(63,63,63);
+}
+.atalk{
+ margin:10px; 
+ /* height:50%;*/
+ width: 50%; 
+ padding:10px 200px 10px 0px;
+ /* float:left; */
+}
+.atalk span{
+  background: rgb(243,243,243);
+  display:inline-block;
+  /* background:#0181cc; */
+  border-radius:10px;
+  /* color:#fff; */
+  padding:5px 10px;
+}
+.btalk{
+  /* margin:10px; */
+  /* height:50%; */
+  /* width: 100%; */
+  padding:10px 0 10px 200px;
+  /* float:right; */
+  /* padding-left:400px; */
+}
+.btalk span{
+  background: rgb(243,243,243);
+  width: 95%;
+  /* font-size: small; */
+  display:inline-block;
+  /* background:#ef8201; */
+  border-radius:10px;
+  /* color:#fff; */
+  padding:5px 10px;
+  /* margin-right: 20%; */
+}
+.talk_show .time{
+  background: #d6d6c2;
+  color:#fff;
+  width: 45px;
+  border-radius:20px;
+  padding:1px 2px;
+  font-size: 50%;
+}
+.talk_show .talk_special{
+  /* width:100%; */
+  height:10%;
+  border-radius: 10px;
+  background-color: rgba(239,130,1);
+  /* color:#000; */
+   /* -webkit-box-shadow: 0 0 10px rgba(239,130,1);  */
+}
